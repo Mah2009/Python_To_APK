@@ -1,0 +1,518 @@
+print("Hello")
+print("What is your name, please?")
+name = input()
+print("Welcome " + name + " to our Mahmoz Hotel")
+print("What is your phone number, please?")
+phone_number = input()
+print("How can I help you? We have three types of rooms in our hotel")
+print("Room(A) has breakfast,lunch,dinner,drinks, and  tickets to the amusement park")
+print("Room(B) has breakfast,lunch,dinner,drinks,and tickets to the amusement park")
+print("Room(C)(Vip Room) has breakfast,lunch, dinner,drinks,and tickets to the amusement park")
+i=1
+while i==1:
+ print("Which room do you want to book?") 
+ answer=input()
+ if answer == "Room(A)":
+         price = 100
+ elif answer == "Room(B)":
+        price = 190
+ elif answer == "Room(C)" or answer == "VIP Room":
+        price = 350
+ else:
+    print("We don't have your order, please try again")
+    exit()
+ if answer == "Room(A)":
+        print("What do you want to eat for breakfast?")
+        print("1. Sausage and egg sandwich")
+        print("2. Luncheon egg sandwich")
+        print("3. Goulash with sausage")
+        print("4. Fried potato")
+        print("5. Chicken sandwich")
+        order1 = input()
+        if order1 == "Sausage and egg sandwich" or order1 == "1":
+            price1 = 50
+        elif order1 == "Luncheon egg sandwich" or order1 == "2":
+            price1 = 25
+        elif order1 == "Goulash with sausage" or order1 == "3":
+            price1 = 65
+        elif order1 == "Fried potato" or order1 == "4":
+            price1 = 45
+        elif order1 == "Chicken sandwich" or order1 == "5":
+            price1 = 85
+        else:
+            print("We don't have your order, please try again")
+            exit()
+        print("How many sandwiches do you want?")
+        number1 = input()
+        total_cost_of_breakfast1 = price1 * int(number1)
+        print("The total cost of breakfast will be " + str(total_cost_of_breakfast1) + " sir")
+        print("What do you want to eat for lunch?")
+        print("1. Greek Salad")
+        print("2. Roasted Cauliflower Tacos")
+        print("3. Steak Sandwich with Arugula")
+        print("4. Salmon Niçoise Salad")
+        print("5. Sweet Pea Risotto")
+        order2 = input()
+        if order2 == "Greek Salad" or order2 == "1":
+          price2 = 120
+        elif order2 == "Roasted Cauliflower Tacos" or order2 == "2":
+          price2 = 200
+        elif order2 == "Steak Sandwich with Arugula" or order2 == "3":
+          price2 = 300
+        elif order2 == "Salmon Niçoise Salad" or order2 == "4":
+          price2 = 900
+        elif order2 == "Sweet Pea Risotto" or order2 == "5":
+          price2 = 100
+        else:
+         print("We don't have your order, please try again")
+         exit()
+        print("How many meals do you want for lunch?")
+        number2 = int(input())
+        total_cost_of_lunch = price2 * number2
+        print("The total cost of lunch will be " + str(total_cost_of_lunch) + " sir")
+        print("What do you want to eat for dinner?")
+        print("1. Wholesome Meals")
+        print("2. Cajun Cabbage Skillet")
+        print("3. Beef Stir-Fry")
+        print("4. Pasta Puttanesca")
+        print("5. Shrimp Stir-Fry")
+        order3 = input() 
+        if order3 == "Wholesome Meals" or order3 == "1":
+         price3 = 200
+        elif order3 == "Cajun Cabbage Skillet" or order3 == "2":
+         price3 = 295
+        elif order3 == "Beef Stir-Fry" or order3 == "3":
+         price3 = 300
+        elif order3 == "Pasta Puttanesca" or order3 == "4":
+         price3 = 350
+        elif order3 == "Shrimp Stir-Fry" or order3 == "5":
+         price3 = 400
+        else:
+         print("We don't have your order, please try again")
+         exit()
+        print("How many meals do you want for dinner?")
+        number3 = int(input())
+        total_cost_of_dinner = price3 * number3
+        print("The total cost of dinner will be " + str(total_cost_of_dinner) + " sir")
+        print("What do you want to drink?")
+        print("1. Coffee")
+        print("2. Mango lassi")
+        print("3. Red Bull")
+        print("4. Fanta")
+        print("5. Pepsi")
+        print("6. Ice coffee")
+        print("7. Tea")
+        print("8. Coca-cola")
+        order = input()
+        if order == "Coffee" or order == "1":
+         price = 25
+        elif order == "Mango lassi" or order == "2":
+         price = 30
+        elif order == "Red Bull" or order == "3":
+         price = 50
+        elif order == "Fanta" or order == "4":
+         price = 20
+        elif order == "Pepsi" or order == "5":
+         price = 20
+        elif order == "Ice coffee" or order == "6":
+         price = 70
+        elif order == "Tea" or order == "7":
+         price = 15
+        elif order == "Coca-cola" or order == "8":
+         price = 20
+        else:
+          print("We don't have your order, please try again")
+          exit()
+
+        print("How many cups do you want?")
+        num = int(input())
+        charge = num * price
+        print("The price of drinks will be " + str(charge) + " sir")
+
+        print("How many tickets do you want to book?")
+        num_tickets = int(input())
+        price_of_tickets = 100
+        cost = num_tickets * price_of_tickets
+        if num_tickets == 1:
+          discount = 0.7
+        elif num_tickets == 2:
+         discount = 0.6
+        elif num_tickets == 3:
+         discount = 0.5
+        elif num_tickets == 4:
+         discount = 0.4
+        elif num_tickets == 5:
+         discount = 0.3
+        else:
+         discount = 1
+         exit()
+        charge_tickets = cost * discount
+        print("The price of tickets will be " + str(charge_tickets) + " sir")
+
+        print("Thank you for staying with us!")
+ if answer == "Room(B)":
+   print("What do you want to eat for breakfast?")
+   print("1. Sausage and egg sandwich")
+   print("2. Luncheon egg sandwich")
+   print("3. Goulash with sausage")
+   print("4. Fried potato")
+   print("5. Chicken sandwich")
+   print("6. chilaquiles")
+   print("7. Facturas")
+   print("8. Croissants")
+   order4 = input()
+   if order4 == "Sausage and egg sandwich" or order4 == "1":
+    price4 = 50
+   elif order4 == "Luncheon egg sandwich" or order4 == "2":
+     price4 = 25
+   elif order4 == "Goulash with sausage" or order4 == "3":
+      price4 = 65
+   elif order4 == "Fried potato" or order4 == "4":           
+      price4 = 45
+   elif order4 == "Chicken sandwich" or order4 == "5":
+      price4 = 85
+   elif order4 == "chilaquiles" or order4 == "6":
+       price4 = 55
+   elif order4 == "Facturas" or order4 == "7":
+       price4 = 59
+   elif order4 == "Croissants" or order4 == "8":
+       price4 = 67
+
+   else:
+        print("We don't have your order, please try again")
+        exit()
+   print("How many sandwiches do you want?")
+   number4 = input()
+   Total_of_Beakfast2 = price4 * int(number4)
+   print("The total cost of breakfast will be " + str(Total_of_Beakfast2) + " sir")
+   print("What do you want to eat for lunch?")
+   print("1. Greek Salad")
+   print("2. Roasted Cauliflower Tacos")
+   print("3. Steak Sandwich with Arugula")
+   print("4. Salmon Niçoise Salad")
+   print("5. Sweet Pea Risotto")
+   print("6. Superfood salad")
+   print("7. Fish and chips")
+   print("8. Curry")
+   order5 = input()
+   if order5 == "Greek Salad" or order5 == "1":
+     price5 = 120
+   elif order5 =="Roasted Cauliflower Tacos" or order5=="2":
+     price5 = 200
+   elif order5 =="Steak Sandwich with Arugula" or order5=="3":
+     price5 = 300
+   elif order5 == "Salmon Niçoise Salad" or order5 == "4":
+      price5 = 900
+   elif order5 == "Sweet Pea Risotto" or order5 == "5":
+      price5 = 100
+   elif order5 == " Superfood salad" or order5=="6":
+      price5 = 300
+   elif order5 == "Fish and chips" or order5 == "7":
+      price5 = 900
+   elif order5 == "Curry" or order5 == "8":
+      price5 = 100
+   else:
+        print("We don't have your order, please try again")
+        exit()
+   print("How many meals do you want in lunch?")
+   number5 = input()
+   total_cost_of_lunch2 = price5 * int(number5)
+   print("The total cost of lunch will be " + str(total_cost_of_lunch2) + " sir")
+   print("What do you want to eat for dinner?")
+   print("1. Wholesome Meals")
+   print("2. Cajun Cabbage Skillet")
+   print("3. Beef Stir-Fry")
+   print("4. Pasta Puttanesca")
+   print("5. Shrimp Stir-Fry")
+   print("6. American Goulash")
+   print("7. Chickpea Curry")
+   print("8. Zucchini Enchiladas")
+   order6 = input()
+   if order6 == "Wholesome Meals" or order6 == "1":
+            price6 = 200
+   elif order6 == "Cajun Cabbage Skillet" or order6 == "2":
+            price6 = 295
+   elif order6 == "Beef Stir-Fry" or order6 == "3":
+            price6 = 300
+   elif order6 == "Pasta Puttanesca" or order6 == "4":
+            price6 = 350
+   elif order6 == "Shrimp Stir-Fry" or order6 == "5":
+            price6 = 400
+   elif order6 == "American Goulash" or order6 == "6":
+            price6 = 500
+   elif order6 == "Chickpea Curry" or order6 == "7":
+            price6 = 399
+   elif order6 == "Zucchini Enchiladas" or order6 == "8":
+            price6 = 401
+
+   else:
+        print("We don't have your order, please try again")
+        exit()
+   print("How many meals do you want in dinner?")
+   number6 = input()
+   total_cost_of_dinner2 = price6 * int(number6)
+   print("The total cost of dinner will be " + str(total_cost_of_dinner2) + " sir")
+   print ("what do you want to drink?") 
+   print("1. Coffee")
+   print("2. Mango lassi")
+   print("3. Red Bull")
+   print("4. Fanta")
+   print("5. pepsi")
+   print("6. ice coffee")
+   print("7. Tee")
+   print("8. Coca-cola")
+   print("9. Lemonade")
+   print("10. sobia")
+   order7 = input()
+   if order7 == "Coffee" or order7 == "1":
+         price7 = 25 
+   elif order7 == "Mango lassi"  or order7 == "2":
+         price7 = 30 
+   elif order7 == "Red Bull" or order7 == "3":
+         price7 = 50
+   elif order7 == "Fanta"or order7 == "4":
+         price7 = 20
+   elif order7 == "Pepsi" or order7 == "5":
+         price7 = 20 
+   elif order7 == "ice coffee"  or order7 == "6":
+         price7 = 70
+   elif order7 == "Tee" or order7 == "7":
+         price7 = 15
+   elif order7 == "Coca-cola"or order7 == "8":
+         price7 = 20 
+   elif order7 == "Lemonade" or order7 == "9":
+         price7 = 40
+   elif order7 == "sobia"or order7 == "10":
+         price7 = 25
+   else :
+      print ("we dont have your order , please try again ")
+      exit()
+   print (" how many cups do you want ")
+   num2 = input ()
+   charge2 = int(num2) * price7 
+  
+ 
+   print("The Price of drinks will be "+ str(charge2) +" sir")
+
+
+   print("How many tickets do you want to book?")
+   num3 = int(input())
+   price_of_tickets = 100
+   cost2 = num3 * price_of_tickets
+   if num3 == 1:
+          discount = 0.7
+   elif num3 == 2:
+          discount = 0.6
+   elif num3 == 3:
+          discount = 0.5
+   elif num3 == 4: 
+          discount = 0.4
+   elif num3 == 5:
+          discount = 0.3
+   else:
+      print("please try again,we don't have your order")
+      exit()
+   charge3 = cost2 * discount  
+   print("The price of tickets will be " + str(charge3) + " sir")
+   print("Thank you for staying with us " + name + "!")
+ if answer == "Room(C)" or answer == "Vip Room":
+   print("What do you want to eat for breakfast?")
+   print("1. Sausage and egg sandwich")
+   print("2. Luncheon egg sandwich")
+   print("3. Goulash with sausage")
+   print("4. Fried potato")
+   print("5. Chicken sandwich")
+   print("6. chilaquiles")
+   print("7. Facturas")
+   print("8. Croissants")
+   print("9. pancake")
+   print("10. cinnamon roll")
+   order8 = input()
+   if order8 == "Sausage and egg sandwich" or order8 == "1":
+    price8 = 50
+   elif order8 == "Luncheon egg sandwich" or order8 == "2":
+     price8 = 25
+   elif order8 == "Goulash with sausage" or order8 == "3":
+      price8 = 65
+   elif order8 == "Fried potato" or order8 == "4":           
+      price8 = 45
+   elif order8 == "Chicken sandwich" or order8 == "5":
+      price8 = 85
+   elif order8 == "chilaquiles" or order8 == "6":
+       price8 = 55
+   elif order8 == "Facturas" or order8 == "7":
+       price8 = 59
+   elif order8 == "Croissants" or order8 == "8":
+       price8 = 67
+   elif order8 == "pancake" or order8 == "9":
+       price8 = 80
+   elif order8 == "cinnamon roll" or order8 == "10":
+       price8 = 100
+   else:
+       print("We don't have your order, please try again")
+       exit()
+   print("How many sandwiches do you want?")
+   number7 = input()
+   Total_cast_of_Beakfast3 = price8 * int(number7)
+   print("The total cost of breakfast will be " + str(Total_cast_of_Beakfast3) + " sir")
+   print("What do you want to eat for lunch?")
+   print("1. Greek Salad")
+   print("2. Roasted Cauliflower Tacos")
+   print("3. Steak Sandwich with Arugula")
+   print("4. Salmon Niçoise Salad")
+   print("5. Sweet Pea Risotto")
+   print("6. Superfood salad")
+   print("7. Fish and chips")
+   print("8. Curry")
+   print("9. Duck wrap")
+   print("10. Caesar salad")
+   order9 = input()
+   if order9 == "Greek Salad" or order9== "1":
+     price9 = 120
+   elif order9 =="Roasted Cauliflower Tacos" or order9=="2":
+     price9 = 200
+   elif order9 =="Steak Sandwich with Arugula" or order9=="3":
+      price9 = 300
+   elif order9 == "Salmon Niçoise Salad" or order9 == "4":
+      price9 = 900
+   elif order9 == "Sweet Pea Risotto" or order9 == "5":
+      price9 = 100
+   elif order9 == " Superfood salad" or order9 == "6":
+      price9 = 300
+   elif order9 == "Fish and chips" or order9 == "7":
+      price9 = 900
+   elif order9 == "Curry" or order9 == "8":
+      price9 = 100
+   elif order9 == "Duck wrap" or order9 == "9":
+      price9 = 225
+   elif order9 == "Caesar salad" or order9 == "10":
+      price9 = 130
+   else:
+        print("We don't have your order, please try again")
+        exit()
+   print("How many meals do you want in lunch?")
+   number8 = input()
+   total_cost_of_lunch3 = price9 * int(number8)
+   print("The total cost of lunch will be " + str(total_cost_of_lunch3) + " sir")
+   print("What do you want to eat for dinner?")
+   print("1. Wholesome Meals")
+   print("2. Cajun Cabbage Skillet")
+   print("3. Beef Stir-Fry")
+   print("4. Pasta Puttanesca")
+   print("5. Shrimp Stir-Fry")
+   print("6. American Goulash")
+   print("7. Chickpea Curry")
+   print("8. Zucchini Enchiladas")
+   print("9. roast chicken")
+   print("10. prawn sandwich")
+   order10 = input()
+   if order10 == "Wholesome Meals" or order10 == "1":
+            price10 = 200
+   elif order10 == "Cajun Cabbage Skillet" or order10 == "2":
+            price10 = 295
+   elif order10 == "Beef Stir-Fry" or order10 == "3":
+            price10 = 300
+   elif order10 == "Pasta Puttanesca" or order10 == "4":
+            price10 = 350
+   elif order10 == "Shrimp Stir-Fry" or order10 == "5":
+            price10= 400
+   elif order10 == "American Goulash" or order10 == "6":
+            price10 = 500
+   elif order10 == "Chickpea Curry" or order10 == "7":
+            price10 = 399
+   elif order10 == "Zucchini Enchiladas" or order10 == "8":
+            price10 = 401
+   elif order10 == "roast chicken" or order10 == "9":
+             price10 = 400
+   elif order10 == "prawn sandwich" or order10 == "10":
+             price10 = 120
+
+   else:
+        print("We don't have your order, please try again")
+        exit()
+   print("How many meals do you want in dinner?")
+   number9 = input()
+   total_cost_of_dinner3 = price10 * int(number9)
+   print("The total cost of dinner will be " + str(total_cost_of_dinner3) + " sir")
+   print ("what do you want to drink?") 
+   print("1. Coffee")
+   print("2. Mango lassi")
+   print("3. Red Bull")
+   print("4. Fanta")
+   print("5. pepsi")
+   print("6. ice coffee")
+   print("7. Tee")
+   print("8. Coca-cola")
+   print("9. Lemonade")
+   print("10. sobia")
+   print("11. Orange juice")
+   print("12. Frozen Lemonade")
+   print("13. Strawberry-Mint Tea")
+   print("14. Lemonade Iced Tea")
+   print("15. Berry Splash")
+   order11 = input()
+   if order11 == "Coffee" or order11 == "1":
+         price11 = 25 
+   elif order11 == "Mango lassi"  or order11 == "2":
+         price11 = 30 
+   elif order11 == "Red Bull" or order11 == "3":
+         price11 = 50
+   elif order11 == "Fanta"or order11 == "4":
+         price11 = 20
+   elif order11 == "Pepsi" or order11 == "5":
+         price11 = 20 
+   elif order11 == "ice coffee"  or order11 == "6":
+         price11 = 70
+   elif order11 == "Tee" or order11 == "7":
+         price11 = 15
+   elif order11 == "Coca-cola"or order11 == "8":
+         price11 = 20 
+   elif order11 == "Lemonade" or order11 == "9":
+         price11 = 40
+   elif order11 == "sobia"or order11 == "10":
+         price11 = 25
+   elif order11 == "Orange juice" or order11 == "11":
+         price11 = 40 
+   elif order11 == "Frozen Lemonade"  or order11 == "12":
+         price11 =40 
+   elif order11 == "Strawberry-Mint Tea" or order11 == "13":
+         price11 =35
+   elif order11 == "Lemonade Iced Tea"or order11 == "14":
+         price11 =35 
+   elif order11 == "Berry Splash" or order11 == "15":
+         price11 = 55
+   else :
+        print ("we dont have your order , please try again ")
+        exit()
+   print (" how many cups do you want ")
+   num4 = input ()
+   charge3 = int(num4) * price11 
+  
+ 
+   print("The Price of drinks will be "+ str(charge3) +" sir")
+
+
+   print("How many tickets do you want to book?")
+   num3 = int(input())
+   price_of_tickets = 100
+   cost3 = num3 * price_of_tickets
+   if num3 == 1:
+          discount = 0.7
+   elif num3 == 2:
+          discount = 0.6
+   elif num3 == 3:
+          discount = 0.5
+   elif num3 == 4: 
+          discount = 0.4
+   elif num3 == 5:
+          discount = 0.3
+   else:
+      print("please try again,we don't have your order")
+      exit()
+   charge5 = cost3 * discount  
+   print("The price of tickets will be " + str(charge5) + " sir")
+   print("Thank you for staying with us " + name + "!")
+ print("Do you want to order again ? if yes press 1 if no press 0")
+ i=int (input())  
+ if i == 0:
+   print("Thank you for staying with us " + name + "!")
